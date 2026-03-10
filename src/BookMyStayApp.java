@@ -1,22 +1,17 @@
 abstract class Room {
 
-    // Number of beds available in the room
     protected int numberOfBeds;
 
-    // Total size of the room in square feet
     protected int squareFeet;
 
-    // Price charged per night
     protected double pricePerNight;
 
-    // Constructor
     public Room(int numberOfBeds, int squareFeet, double pricePerNight) {
         this.numberOfBeds = numberOfBeds;
         this.squareFeet = squareFeet;
         this.pricePerNight = pricePerNight;
     }
 
-    // Method to display room details
     public void displayRoomDetails() {
         System.out.println("Number of Beds: " + numberOfBeds);
         System.out.println("Room Size: " + squareFeet + " sq ft");
@@ -24,7 +19,6 @@ abstract class Room {
     }
 }
 
-// Single Room Class
 class SingleRoom extends Room {
 
     public SingleRoom() {
@@ -32,7 +26,6 @@ class SingleRoom extends Room {
     }
 }
 
-// Double Room Class
 class DoubleRoom extends Room {
 
     public DoubleRoom() {
@@ -40,7 +33,6 @@ class DoubleRoom extends Room {
     }
 }
 
-// Suite Room Class
 class SuiteRoom extends Room {
 
     public SuiteRoom() {
@@ -48,17 +40,14 @@ class SuiteRoom extends Room {
     }
 }
 
-// Main Class
 public class BookMyStayApp {
 
     public static void main(String[] args) {
 
-        // Create room objects using polymorphism
         Room single = new SingleRoom();
         Room doubleRoom = new DoubleRoom();
         Room suite = new SuiteRoom();
 
-        // Static availability variables
         int singleAvailable = 5;
         int doubleAvailable = 3;
         int suiteAvailable = 2;
