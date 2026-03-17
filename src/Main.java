@@ -1,4 +1,4 @@
-import java.util.*;
+iimport java.util.*;
 
 // -------------------- RESERVATION --------------------
 class Reservation {
@@ -122,6 +122,8 @@ class BookingService {
         for (Map.Entry<String, Set<String>> entry : roomAllocations.entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
+
+        System.out.println("Total Add-On Cost: ₹" + calculateTotalCost(reservationId));
     }
 }
 
@@ -152,4 +154,7 @@ public class Main {
 
         System.out.println("\nRemaining Inventory: " + inventory.getAll());
     }
+}
+
+void main() {
 }
