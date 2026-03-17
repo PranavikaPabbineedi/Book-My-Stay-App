@@ -1,13 +1,32 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import java.util.List;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+class Room {
+    private String roomType;
+    private double price;
+    private List<String> amenities;
+
+    public Room(String roomType, double price, List<String> amenities) {
+        this.roomType = roomType;
+        this.price = price;
+        this.amenities = amenities;
+    }
+
+    public String getRoomType() {
+        return roomType;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public List<String> getAmenities() {
+        return amenities;
+    }
+
+    @Override
+    public String toString() {
+        return "Room Type: " + roomType +
+                ", Price: " + price +
+                ", Amenities: " + amenities;
     }
 }
