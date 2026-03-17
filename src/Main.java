@@ -2,7 +2,6 @@ import java.util.*;
 
 // -------------------- RESERVATION --------------------
 class Reservation {
-    private String reservationId;
     private String guestName;
     private String roomType;
     private String roomId;
@@ -12,10 +11,6 @@ class Reservation {
         this.guestName = guestName;
         this.roomType = roomType;
         this.roomId = roomId;
-    }
-
-    public String getReservationId() {
-        return reservationId;
     }
 
     public String getGuestName() {
